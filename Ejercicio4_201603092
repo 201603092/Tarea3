@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Problema4 {
+
+    public static void main(String[] args) {
+      Scanner numero1 = new Scanner( System.in );
+      int numero;
+      
+      int suma = 0;
+        System.out.println("Escriba su numero:");
+        numero = numero1.nextInt();
+      for(int inicio = 0; inicio <= numero; inicio++ ){
+          if( inicio % 5 == 0){
+              System.out.println(inicio);
+              suma = suma + inicio;
+          }
+          else
+              if(inicio % 3 == 0){
+                  System.out.println(inicio);
+              suma = suma + inicio;
+              }
+          }
+        System.out.println("Su resultado es:" + suma);      
+    }
+}

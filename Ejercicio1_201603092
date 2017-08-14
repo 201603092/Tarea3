@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class Problema1 {
+
+   
+    public static void main(String[] args) {
+        Scanner numero1 = new Scanner( System.in );
+        
+        int producto2mostrar;
+        int num1;
+        int numero1_1;
+        int num2 = 0;     
+        int productonum1;
+        int productonum2;
+        int inversoProducto2 = 0;
+        int residuo = 0;
+        int residuo2 = 0;
+        
+        
+        System.out.println("Escriva su numero!");  
+        num1 = numero1.nextInt();
+        numero1_1 = num1;
+        productonum1 = numero1_1 * numero1_1;
+        System.out.println("Su primer numero es:  " + numero1_1 + "  y su producto:  " + productonum1);
+        
+        while( num1 != 0){
+           residuo = num1 % 10;
+           num1 = num1 / 10;
+           num2 = num2 * 10 + residuo;
+        }
+        productonum2 = num2 * num2;
+        producto2mostrar = productonum2;
+        while( productonum2!= 0){
+           residuo2 =  productonum2 % 10;
+            productonum2 =  productonum2 / 10;
+            inversoProducto2 =  inversoProducto2 * 10 + residuo2;
+        }
+        System.out.println("Su inverso es:  " + num2 + "  y su producto:  " + producto2mostrar+"\n");
+        if(productonum1 == inversoProducto2 )
+            System.out.println("Cunple son las caracteristicas..!");
+        else
+            System.out.println("No cumple con las caracteristicas..!");
+        }        
+  
+    }
